@@ -3,7 +3,12 @@ Command-line tool to cheat in any game
 
 ## Download
 
-Precompiled binaries: [Mac](./raw/master/cheat) [Windows](./raw/master/cheat.exe)
+Precompiled binaries.:
+
+ - [Mac](./cheat)
+ - [Windows](./cheat.exe)
+
+(Use "raw" link to download.)
 
 ## Usage
 

@@ -1,6 +1,4 @@
 
-//the super useful process_name() function, and other functions pertaining to processes
-
 #include <windows.h>
 #include <psapi.h>
 #pragma comment(lib,"psapi.lib")

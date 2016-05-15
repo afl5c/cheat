@@ -1,6 +1,10 @@
 # cheat
 Command-line tool to cheat in any game
 
+## Download
+
+Precompiled binaries: [Mac](./raw/master/cheat) [Windows](./raw/master/cheat.exe)
+
 ## Usage
 
 Run the executable. (On Mac, you need to run as root.)

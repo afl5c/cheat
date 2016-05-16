@@ -3,7 +3,7 @@ Command-line tool to cheat in any game
 
 ## Download
 
-Precompiled binaries.:
+Precompiled binaries:
 
  - [Mac](./cheat)
  - [Windows](./cheat.exe)
@@ -30,6 +30,7 @@ wi [value] => write int value
 ## Compiling
 
 On Mac: ```g++ main.cpp -lreadline```.
+
 On Windows: ```cl.exe main.cpp```.
 
 

@@ -7,6 +7,7 @@
 #include "process_mac.h"
 #include <readline/readline.h>
 #include <readline/history.h>
+#include <unistd.h> //for getuid()
 #endif
 
 //read a line from stdin, while supporting history on posix
@@ -64,11 +65,15 @@ int main(int argc, char** argv){
 			printf("fc [value] => find char value\n");
 			printf("fs [value] => find short value\n");
 			printf("fi [value] => find int value\n"); 
+			printf("ff [value] => find float value\n");
+			printf("fd [value] => find double value\n");
 			printf("reset => reset search\n");
 			printf("print => print addresses found\n");
 			printf("wc [value] => write char value\n");
 			printf("ws [value] => write short value\n");
 			printf("wi [value] => write int value\n");
+			printf("wf [value] => write float value\n");
+			printf("wd [value] => write double value\n");
 			printf("\n");
 			continue;
 		}
@@ -81,6 +86,8 @@ int main(int argc, char** argv){
 		int ibuf;
 		short sbuf;
 		char cbuf;
+		float fbuf;
+		double dbuf;
 		string s;
 		void* data;
 		int dlen;
@@ -89,6 +96,8 @@ int main(int argc, char** argv){
 				case 'c': cbuf = atoi(arg.c_str()); data = &cbuf; dlen = 1; break;
 				case 's': sbuf = atoi(arg.c_str()); data = &sbuf; dlen = 2; break;
 				case 'i': ibuf = atoi(arg.c_str()); data = &ibuf; dlen = 4; break;
+				case 'f': fbuf = atof(arg.c_str()); data = &fbuf; dlen = 4; break;
+				case 'd': dbuf = atof(arg.c_str()); data = &dbuf; dlen = 8; break;
 				default: break;
 			}
 			switch(cmd[0]){
